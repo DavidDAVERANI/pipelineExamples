@@ -28,7 +28,7 @@ pipeline {
 				echo 'STEP DEPLOLY ZAAMA'
 				script {
 					if(params.PRE_COMPILE) {
-						echo " Branche name = ${params.userFlag}"
+						echo " Branche name = ${params.BRNACHE_NAME}"
 					}
 				}
 			}
