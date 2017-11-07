@@ -32,11 +32,7 @@ pipeline {
 				echo 'STEP DEPLOLY ZAAMA'
 				script {
 					if(params.PRE_COMPILE) {
-<<<<<<< HEAD
 						echo " PRE_COMPILE value = ${params.PRE_COMPILE}"
-=======
-						echo " Branche name = ${params.BRNACHE_NAME}"
->>>>>>> d03bcb028899d4f32c147ef420027eade33a9a41
 					}
 				}
 			}
