@@ -16,9 +16,7 @@ pipeline {
 
 		stage ('Testting Stage') {
 			steps {
-				withMaven (maven : 'maven_3_3_9') {
-					echo 'STEP TEST ZAAMA'
-				}
+				sh "/var/lib/jenkins/myscripts/script1.sh ${env.BRANCH_NAME}"
 			}
 		}
 
