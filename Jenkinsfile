@@ -9,7 +9,7 @@ pipeline {
             }
 			steps {
 				withMaven(maven : 'maven_3_3_9') {
-					sh 'mvn clean compile'
+					echo 'STEP COMPILE ZAAMA'
 				}
 			}
 		}
@@ -17,7 +17,7 @@ pipeline {
 		stage ('Testting Stage') {
 			steps {
 				withMaven (maven : 'maven_3_3_9') {
-					sh 'mvn test'
+					echo 'STEP TEST ZAAMA'
 				}
 			}
 		}
@@ -25,12 +25,9 @@ pipeline {
 		stage ('Deployment Stage') {
             
 			steps {
-				withMaven (maven : 'maven_3_3_9') {
-
-					sh 'mvn deploy'
-					if(env.BRNACHE_NAME) {
-						sh 'echo '
-					}
+				echo 'STEP DEPLOLY ZAAMA'
+				if(params.PRE_COMPILE) {
+					echo " Branche name = ${params.userFlag}"
 				}
 			}
 		}
