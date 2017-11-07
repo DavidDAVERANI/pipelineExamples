@@ -16,7 +16,7 @@ pipeline {
 
 		stage ('Testting Stage') {
 			steps {
-				sh "/var/lib/jenkins/myscripts/script1.sh ${env.BRANCH_NAME}"
+				sh ". /var/lib/jenkins/myscripts/script1.sh ${env.BRANCH_NAME}"
 			}
 		}
 
